@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-import HistoryCard from "../../components/HistoryCard";
+import StatsScreen from '../StatsScreen'
 
 const Profile = () => {
   return (
@@ -33,9 +33,9 @@ const Profile = () => {
           </View>
         </View>
       </View>
-      <View style={styles.transactions}>
-       <HistoryCard />
-      </View>
+      
+       <StatsScreen />
+      
     </>
   );
 };

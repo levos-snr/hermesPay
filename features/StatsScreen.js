@@ -71,7 +71,7 @@ const expenditureData = [
 const StatsScreen = props =>{
 
     return(
-        <LinearGradient colors = {[colors.bgColor, '#1B1B23']} style = {styles.screen}>
+        <View colors = {colors.bgColor} style = {styles.screen}>
             <ScrollView style = {{paddingHorizontal: 20}}>
             <View style = {styles.chartContainer}>
                 <Text style = {styles.chartTitle}>Savings</Text>
@@ -81,10 +81,11 @@ const StatsScreen = props =>{
                         width = {Dimensions.get('window').width - 40}
                         height = {250}
                         withVerticalLines = {false}
-                        yAxisLabel = '$'
+                        yAxisLabel = 'Ks.'
                         bezier
                         withDots = {false}
                         chartConfig = {{
+
                             backgroundColor: colors.bgColor,
                             backgroundGradientFrom: colors.bgColor,
                             backgroundGradientFromOpacity: 1,
@@ -107,14 +108,17 @@ const StatsScreen = props =>{
                     width={Dimensions.get('window').width - 40}
                     height={220}
                     chartConfig={{
-                        color: (opacity = 1) => '#9D60D5',
+                        color: (opacity = 0.1) => '#9D60D5',
                     }}
                     accessor="population"
-                    backgroundColor="transparent"
+                    backgroundColor="lightblue"
                     paddingLeft="10"
                     absolute = {false}
+                    
+                    
                 />
                 </Card>
+
             </View>
             <View style = {styles.chartContainer}>
                 <Text style = {styles.chartTitle}>Goals</Text>
@@ -127,21 +131,21 @@ const StatsScreen = props =>{
                         hideLegend = {false}
                         radius = {32}
                         chartConfig={{
-                            backgroundGradientFromOpacity: 0,
-                            backgroundGradientToOpacity: 0,
+                            backgroundGradientFromOpacity: 0.5,
+                            backgroundGradientToOpacity: 0.8,
                             color: (opacity = 0.1) => `rgba(157, 96, 213, ${opacity})`,
-                            labelColor: (opacity = 1) => `#7F7F7F`,
-                            
+                            labelColor: (opacity = 1) => `#fff`,
                             
                             propsForLabels:{
-                                fontSize: 11
+                                fontSize: 11,
                             },
+
                           }}
                     />
                 </Card>
             </View>
             </ScrollView>
-        </LinearGradient>
+        </View>
     )
 }
 
@@ -161,7 +165,7 @@ const styles = StyleSheet.create({
     },
     chartTitle: {
         marginLeft: 7, 
-        color: 'white', 
+        color: 'black', 
         fontSize: 16, 
         opacity: 0.5, 
         fontWeight: '600'
