@@ -14,7 +14,7 @@ const Profile = () => {
               <Text>Lewis Odero</Text>
             </View>
             <View style={styles.sex}>
-              <Ionicons name="person" size={20} color={"grey"} />
+              <Ionicons name="person" size={20} color={"white"} />
               <Text>Male</Text>
             </View>
             <View style={styles.job}>
