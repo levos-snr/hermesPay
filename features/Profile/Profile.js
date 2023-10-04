@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 10,
     border: "1px solid #fff",
-    padding: 40,
-    margin: 20,
+    padding: 15,
+    margin: 15,
   },
   transText: {
     textAlign: "center",

@@ -16,6 +16,11 @@ import UserNotifications from "../features/UserNotifications/UserNotifications";
 import Settings from "../features/Settings/Settings";
 import Home from "../features/Home/Home"
 import Wallet from '../features/Wallet/Wallet';
+import SendMoneyScreen from '../features/Send/SendMoneyScreen';
+import RecieverDetailsScreen  from '../features/Send/RecieverDetailsScreen';
+import ConfirmDetailsScreen from '../features/Send/ConfirmDetailsScreen';
+
+
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -113,6 +118,22 @@ const appNavigation = () => {
           <Stack.Screen
             name="Add Money"
             component={Add}
+            options={{ headerStyle: { backgroundColor: "#1dcf9f" } }}
+          />
+           <Stack.Screen
+          name="Send"
+          component={SendMoneyScreen}
+          options={{ headerStyle: { backgroundColor: "#1dcf9f" } }}
+        />
+         <Stack.Screen
+          name="ConfirmDetails"
+          component={ConfirmDetailsScreen}
+          options={{ headerStyle: { backgroundColor: "#1dcf9f" } }}
+        />
+         
+         <Stack.Screen
+            name="RecieverDetails"
+            component={RecieverDetailsScreen}
             options={{ headerStyle: { backgroundColor: "#1dcf9f" } }}
           />
           <Stack.Screen

@@ -8,7 +8,7 @@ const AuthFormInput = (props) =>{
             <TextInput 
                 style = {styles.textInput}
                 placeholder = {props.placeholder}
-                placeholderTextColor = '#8B8B98'
+                placeholderTextColor = '#000'
             />
            
         </View>
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 
     },
     textInput: {
-        backgroundColor: 'white',
+        backgroundColor: 'gray',
         paddingVertical: 14, 
         paddingHorizontal: 10,
         borderRadius: 10,
