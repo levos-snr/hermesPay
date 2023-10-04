@@ -1,15 +1,32 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { StyleSheet, View, Text, TouchableWithoutFeedback } from 'react-native';
+import AuthFormInput from '../../components/AuthFormInput';
 
-const SignUp = () => {
-  
-  return (
-    <View>
-      <Text>SignUp</Text>
-    </View>
-  )
+
+const SignUp = () =>{
+    return(
+        <View>
+            <AuthFormInput
+                placeholder = "Name"
+            />
+            <AuthFormInput
+                placeholder = "Phone Number"
+            />
+            <AuthFormInput
+                placeholder = "Email Address"
+            />
+            <AuthFormInput
+                placeholder = "Password"
+            />
+            <AuthFormInput
+                placeholder = "Confirm Password"
+            />
+        </View>
+    )
 }
 
-export default SignUp
+const styles = StyleSheet.create({
 
-const styles = StyleSheet.create({})
+})
+
+export default SignUp;

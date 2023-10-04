@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
+import HistoryCard from "../../components/HistoryCard";
 
 const Profile = () => {
   return (
@@ -14,12 +15,12 @@ const Profile = () => {
               <Text>Lewis Odero</Text>
             </View>
             <View style={styles.sex}>
-              <Ionicons name="person" size={20} color={"white"} />
+              <Ionicons name="person" size={20} color={"gray"} />
               <Text>Male</Text>
             </View>
             <View style={styles.job}>
               <Ionicons name="briefcase-outline" size={20} color={"grey"} />
-              <Text></Text>
+              <Text>Student</Text>
             </View>
             <View style={styles.accountVerification}>
               <Ionicons
@@ -33,8 +34,7 @@ const Profile = () => {
         </View>
       </View>
       <View style={styles.transactions}>
-        <Text style={styles.transText}>Previous Transactions</Text>
-        <Text style={styles.noTransaction}>'No Transactions Yet'</Text>
+       <HistoryCard />
       </View>
     </>
   );
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 10,
     border: "1px solid #fff",
-    padding: 40,
+    padding: 30,
     margin: 20,
   },
   userDetails: {

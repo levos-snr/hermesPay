@@ -1,31 +1,37 @@
-import { StyleSheet, View, Text} from "react-native";
-import React from "react";
-import { Ionicons } from "@expo/vector-icons";
+import React from 'react'
+import { View, StyleSheet, Text } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { LinearGradient } from 'expo-linear-gradient';
+import colors from '../../util/colors';
+import NotificationCard from '../../components/Notification';
 
+const UserNotifications = props =>{
+    return(
 
-const UserNotifications = () => {
-  return (
-    <View style={styles.notificationPage}>
-      <Ionicons name="notifications-outline" size={200} color={"#808080"} />
-      <Text style={styles.notifyText}>No Notifications Yet!</Text>
-    </View>
-  );
-};
+        <View colors = {colors.bgColo} style = {{flex: 1}}>
+            <ScrollView style = {{flex: 1}}>
+                <View>
+                    <Text style = {styles.date}>12 Nov 2018</Text>
+                    <View> 
+                        <NotificationCard message ="Transfer of Ksh.30,000 done by Lewis " time ="08.30 AM"/>
+                        <NotificationCard message ="User name has bee changed " time ="13.30 PM"/>
+                        <NotificationCard message ="Transfer of Ksh.10,000 done by Lewis " time ="21.30 PM"/>
+                    </View>
+                </View>
+            </ScrollView>            
+        </View>
 
-export default UserNotifications;
+    )
+}
 
 const styles = StyleSheet.create({
-  notificationPage: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: 70,
-    marginVertical: 150
-  },
-  notifyText: {
-    color: "#808080",
-    fontSize: 24,
-    fontWeight: 300,
-  },
-});
+    date: {
+        color: 'white',
+        fontSize: 17,
+        opacity: 0.3,
+        marginLeft: 20,
+        marginTop: 20
+    }
+})
+
+export default UserNotifications;

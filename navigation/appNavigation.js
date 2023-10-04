@@ -6,15 +6,16 @@ import History from "../features/History/History";
 import Add from "../features/AddMoney/Add";
 import CashTransfer from "../features/CashTransfer/CashTransfer";
 import SignUp from "../features/Auth/SignUp";
+import FirstAuthScreen from "../components/AuthMain/FirstAuthScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import "react-native-gesture-handler";
 import Profile from "../features/Profile/Profile";
-import AccountDetails from "../features/AccountDetails/AccountDetails";
 import UserNotifications from "../features/UserNotifications/UserNotifications";
 import Settings from "../features/Settings/Settings";
 import Home from "../features/Home/Home"
+import Wallet from '../features/Wallet/Wallet';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -61,7 +62,7 @@ export function Welcome() {
           />
            <Tab.Screen
             name="Wallet"
-            component={AccountDetails}
+            component={Wallet}
             options={{
               headerStyle: { backgroundColor: "#1dcf9f" },
               tabBarIcon: () => (
@@ -94,6 +95,11 @@ const appNavigation = () => {
     <StatusBar style="#1dcf9f" />
       
         <Stack.Navigator>
+        <Stack.Screen
+            name="FirstAuthScreen "
+            component={FirstAuthScreen}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="SignIn "
             component={SignIn}

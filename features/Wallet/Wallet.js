@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, } from "react-native";
 
 
-const AccountDetails = () => {
+const Wallet = () => {
  
   return (
     <>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AccountDetails;
+export default Wallet;
