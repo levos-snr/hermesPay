@@ -15,10 +15,11 @@ import Profile from "../features/Profile/Profile";
 import UserNotifications from "../features/UserNotifications/UserNotifications";
 import Settings from "../features/Settings/Settings";
 import Home from "../features/Home/Home"
-import Wallet from '../features/Wallet/Wallet';
+import Cards from '../features/Cards/Cards';
 import SendMoneyScreen from '../features/Send/SendMoneyScreen';
 import RecieverDetailsScreen  from '../features/Send/RecieverDetailsScreen';
 import ConfirmDetailsScreen from '../features/Send/ConfirmDetailsScreen';
+import More from '../features/More/MoreScreen'
 
 
 
@@ -41,7 +42,7 @@ export function Welcome() {
               ),
             }}
           />
-          <Tab.Screen
+          {/* <Tab.Screen
             name="Notifications"
             component={UserNotifications}
             options={{
@@ -54,8 +55,22 @@ export function Welcome() {
                 />
               ),
             }}
-          />
+          /> */}
           <Tab.Screen
+            name="Invest"
+            component={UserNotifications}
+            options={{
+              headerStyle: { backgroundColor: "#1dcf9f" },
+              tabBarIcon: () => (
+                <Ionicons
+                  name="leaf"
+                  size={30}
+                  color={"#1dcf9f"}
+                />
+              ),
+            }}
+          />
+          {/* <Tab.Screen
             name="Profile"
             component={Profile}
             options={{
@@ -64,20 +79,20 @@ export function Welcome() {
                 <Ionicons name="person-outline" size={30} color={"#1dcf9f"} />
               ),
             }}
-          />
+          /> */}
            <Tab.Screen
-            name="Wallet"
-            component={Wallet}
+            name="Cards"
+            component={Cards}
             options={{
               headerStyle: { backgroundColor: "#1dcf9f" },
               tabBarIcon: () => (
-                <Ionicons name="wallet-outline" size={30} color={"#1dcf9f"} />
+                <Ionicons name="card" size={30} color={"#1dcf9f"} />
               ),
             }}
           />
           <Tab.Screen
             name="More"
-            component={Settings}
+            component={More}
             options={{
               headerStyle: { backgroundColor: "#1dcf9f" },
               tabBarIcon: () => (

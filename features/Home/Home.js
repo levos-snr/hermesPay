@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import TransactionCard from '../../components/TransactionCard';
 import NewsCard from '../../components/NewsCard';
 import colors from '../../util/colors';
+import { Searchbar } from "react-native-paper";
 
 const Home = props =>{
     const onSendPress = () =>{
@@ -27,21 +28,51 @@ const Home = props =>{
                                 <Image resizeMode = 'contain' style = {styles.profileImg} source = {require('../../assets/images/lewisdp.jpg')}/>
                             </View>
                         </View>
-                        <Text style = {styles.accountTitle}>MY ACCOUNTS</Text>
+                        {/* <Text style = {styles.accountTitle}>MY ACCOUNTS</Text>
                         <View style = {styles.accountCardContainer}>
                                 <AccountCard style = {styles.accountCard}/>
-                        </View>
+                        </View> */}
+                       
+        <View style={styles.heroSection}>
+        <Text style={styles.heroHeader}>Hermes Pay</Text>
+        <View style={styles.heroBody}>
+          <View style={styles.heroContent}>
+            <Text style={styles.heroHeader2}>Fast</Text>
+            <Text style={styles.heroText}>
+                        Pay ,Ivent and swap money fast
+            </Text>
+          </View>
+          <Image
+            style={styles.heroImage}
+            source={require("../../assets/favicon.png")}
+            accessible={true}
+            accessibilityLabel={"Little Lemon Food"}
+          />
+        </View>
+        <Searchbar
+          placeholder="Search"
+          placeholderTextColor="#333333"
+        //   onChangeText={handleSearchChange}
+          value='Search'
+          style={styles.searchBar}
+          iconColor="#333333"
+          inputStyle={{ color: "#333333" }}
+          elevation={0}
+        />
+      </View>
+
                         </View>
                 </View>
                 <View style = {styles.transactionSection}>
                     <Text style = {{...styles.accountTitle, marginLeft: 0}}>Quick Transaction</Text>
                     <View style = {styles.transactionCardsContainer}>
-                        <TransactionCard onPress = {onSendPress} style = {styles.tranCard} iconName = "ios-paper-plane" transactionName = "Send Money"/>
-                        <TransactionCard style = {styles.tranCard} iconName = "ios-phone-portrait" transactionName = "Buy Airtime"/>
-                        <TransactionCard style = {styles.tranCard} iconName = "ios-card" transactionName = "Pay Bill"/>
-                        <TransactionCard style = {styles.tranCard} iconName = "ios-wallet" transactionName = "Split Payment"/>
+                        <TransactionCard onPress = {onSendPress} style = {styles.tranCard} iconName = "ios-paper-plane" transactionName = "Send"/>
+                        <TransactionCard style = {styles.tranCard} iconName = "add-circle" transactionName = "Add"/>
+                        <TransactionCard style = {styles.tranCard} iconName = "receipt-sharp" transactionName = "Invoices"/>
+                        <TransactionCard style = {styles.tranCard} iconName = "swap-horizontal-sharp" transactionName = "Covert"/>
                         <TransactionCard style = {styles.tranCard} iconName = "logo-bitcoin" transactionName = "Buy Crypto"/>
-                        <TransactionCard style = {styles.tranCard} iconName = "ios-car" transactionName = "Xpress Cash"/>
+                        <TransactionCard style = {styles.tranCard} iconName = "leaf" transactionName = "Invest"/>
+                        <TransactionCard style = {styles.tranCard} iconName = "phone-portrait" transactionName = "Bills and Airtime"/>
                     </View>
                 </View>
 
@@ -65,6 +96,38 @@ Home.navigationOptions = (navData)=>{
 }
 
 const styles = StyleSheet.create({
+    heroSection: {
+        backgroundColor: "#495e57",
+        padding: 20,
+      },
+      heroHeader: {
+        color: "#f4ce14",
+        fontSize: 54,
+        // fontFamily: "MarkaziText-Medium",
+      },
+      heroHeader2: {
+        color: "#fff",
+        fontSize: 30,
+        // fontFamily: "MarkaziText-Medium",
+      },
+      heroText: {
+        color: "#fff",
+        // fontFamily: "MarkaziText-Medium",
+        fontSize: 14,
+      },
+      heroBody: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+      },
+      heroContent: {
+        flex: 1,
+      },
+      heroImage: {
+        width: 100,
+        height: 100,
+        borderRadius: 12,
+      },
+
     topSection: {
     },
     topSectionContent: {
@@ -74,8 +137,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        borderBottomWidth: 1,
-        borderColor: '#000',
         marginHorizontal: 20,
         paddingVertical: 20,
     },
@@ -113,7 +174,7 @@ const styles = StyleSheet.create({
         top: 0,
     },
     transactionSection: {
-        marginTop: 80,
+        marginTop: 20,
        marginHorizontal: 20,
     },
 

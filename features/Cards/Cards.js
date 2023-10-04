@@ -6,7 +6,7 @@ const Wallet = () => {
   return (
     <>
       <View style={styles.scroll}>
-        <Text>Wallet</Text>
+        <Text>Cards</Text>
             </View>
     </>
   );
