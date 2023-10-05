@@ -20,6 +20,7 @@ import SendMoneyScreen from '../features/Send/SendMoneyScreen';
 import RecieverDetailsScreen  from '../features/Send/RecieverDetailsScreen';
 import ConfirmDetailsScreen from '../features/Send/ConfirmDetailsScreen';
 import More from '../features/More/MoreScreen'
+import Wallet from '../features/Wallet/Wallet'
 
 
 
@@ -87,6 +88,16 @@ export function Welcome() {
               headerStyle: { backgroundColor: "#1dcf9f" },
               tabBarIcon: () => (
                 <Ionicons name="card" size={30} color={"#1dcf9f"} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Wallet"
+            component={Wallet}
+            options={{
+              headerStyle: { backgroundColor: "#1dcf9f" },
+              tabBarIcon: () => (
+                <Ionicons name="ios-wallet" size={30} color={"#1dcf9f"} />
               ),
             }}
           />
