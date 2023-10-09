@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, SafeAreaView } from 'react-native';
 import AccountCard from '../../components/AccountCard';
-import { LinearGradient } from 'expo-linear-gradient';
 import TransactionCard from '../../components/TransactionCard';
 import NewsCard from '../../components/NewsCard';
 import colors from '../../util/colors';
@@ -12,14 +11,14 @@ const Home = props =>{
         props.navigation.navigate('Send')
     }
     return(
-        <LinearGradient colors = {[colors.bgColor, '#fff']} style = {{flex: 1}}>
+        <View colors = {colors.bgColor} style = {{flex: 1}}>
             <SafeAreaView style = {{flex: 1}}>
             
                 <ScrollView>
                 <View style = {{flex: 1}}>
                 <View style = {styles.topSection}>
                     <View colors = {[colors.bgColor, '#fff']} style = {styles.topSectionContent}>
-                        <View style = {styles.profileInfoContainer}>
+                        {/* <View style = {styles.profileInfoContainer}>
                             <View >
                                 <Text style = {{color: 'black', opacity: 0.7, fontSize: 16}}>Good Evening,</Text>
                                 <Text style = {{color: 'black', opacity: 0.8, fontSize: 20, fontWeight: '600'}}>Lewis Odero</Text>
@@ -27,7 +26,7 @@ const Home = props =>{
                             <View style = {styles.profileImgContainer}>
                                 <Image resizeMode = 'contain' style = {styles.profileImg} source = {require('../../assets/images/lewisdp.jpg')}/>
                             </View>
-                        </View>
+                        </View> */}
                         {/* <Text style = {styles.accountTitle}>MY ACCOUNTS</Text>
                         <View style = {styles.accountCardContainer}>
                                 <AccountCard style = {styles.accountCard}/>
@@ -84,7 +83,7 @@ const Home = props =>{
                 </View>
                 </ScrollView>
             </SafeAreaView>    
-        </LinearGradient>
+        </View>
         
     )
 }

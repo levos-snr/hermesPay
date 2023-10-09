@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet, Text, Dimensions } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import colors from '../util/colors';
 import {PieChart, ProgressChart, LineChart} from 'react-native-chart-kit';
 import Card from '../components/Card';

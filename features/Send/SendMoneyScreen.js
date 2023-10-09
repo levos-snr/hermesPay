@@ -1,6 +1,5 @@
 import React from 'react'
 import { View, StyleSheet, Text, FlatList, Image, ScrollView } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import colors from '../../util/colors';
 import RecieverCard from '../../components/RecieverCard';
 import HistoryCard from '../../components/HistoryCard';

@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet, StatusBar, Text } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import colors from '../../util/colors';
 import CircularButton from '../../components/CircularButton';
 

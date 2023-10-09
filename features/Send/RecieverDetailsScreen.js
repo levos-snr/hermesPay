@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet, Text, ScrollView, TextInput, KeyboardAvoidingView, Platform} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient';
 import colors from '../../util/colors';
 import { useState } from 'react';
 import FormContainer from '../../components/FormContainer';

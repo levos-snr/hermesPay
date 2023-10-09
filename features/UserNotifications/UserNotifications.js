@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import { LinearGradient } from 'expo-linear-gradient';
 import colors from '../../util/colors';
 import NotificationCard from '../../components/Notification';
 

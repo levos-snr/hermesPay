@@ -1,8 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import colors from '../../util/colors';
-import { HeaderTitle } from 'react-navigation-stack';
+import { HeaderTitle } from '@react-navigation/native-stack';
 import {Ionicons} from '@expo/vector-icons';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
